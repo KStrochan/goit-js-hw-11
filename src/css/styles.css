@@ -16,3 +16,12 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+.loader {
+  display: none;
+  /* Стилі для індикатора завантаження */
+}
+
+.loader.is-visible {
+  display: block;
+  /* Ти можеш використовувати, наприклад, анімацію або іконку лоадера */
+}
