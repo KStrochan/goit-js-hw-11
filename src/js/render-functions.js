@@ -1,7 +1,7 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-let lightbox;  // Зберігаємо екземпляр lightbox
+let lightbox; // Оголошуємо змінну для збереження інстансу
 
 export const createGallery = (images) => {
   const gallery = document.querySelector('.gallery');

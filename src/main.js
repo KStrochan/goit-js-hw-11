@@ -2,8 +2,6 @@ import { getImagesByQuery } from './js/pixabay-api';
 import { createGallery, clearGallery, showLoader, hideLoader } from './js/render-functions';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const form = document.querySelector('.form');
 const searchInput = form.querySelector('input[name="search-text"]');
@@ -26,7 +24,7 @@ form.addEventListener('submit', async (event) => {
         position: 'topRight',
       });
     } else {
-      createGallery(data.hits);
+      createGallery(data.hits); // Передаємо дані до createGallery
     }
   } catch (error) {
     iziToast.error({
