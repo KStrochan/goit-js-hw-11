@@ -1,8 +1,3 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-let lightbox = new SimpleLightbox('.gallery a', { /* your options */ });
-
 export const createGallery = (images) => {
   const gallery = document.querySelector('.gallery');
   const markup = images.map(image => {
@@ -14,20 +9,19 @@ export const createGallery = (images) => {
   }).join('');
 
   gallery.innerHTML = markup;
-  lightbox.refresh();
 };
 
 export const clearGallery = () => {
   const gallery = document.querySelector('.gallery');
-  gallery.innerHTML = ''; 
+  gallery.innerHTML = '';  // очищаємо галерею
 };
 
 export const showLoader = () => {
   const loader = document.querySelector('.loader');
-  loader.classList.add('is-visible');
+  loader.classList.add('is-visible');  // Показуємо лоадер
 };
 
 export const hideLoader = () => {
   const loader = document.querySelector('.loader');
-  loader.classList.remove('is-visible'); 
+  loader.classList.remove('is-visible');  // Ховаємо лоадер
 };
